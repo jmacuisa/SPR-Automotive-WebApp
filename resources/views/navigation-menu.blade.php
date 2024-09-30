@@ -17,20 +17,24 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('admin.service-management') }}" :active="request()->routeIs('admin.service-management')">
-                        {{ __('Services Management') }}
+                        {{ __('Services') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('products.index') }}" :active="request()->routeIs('products.index')">
-                        {{ __('Products Management') }}
+                        {{ __('Products') }}
                     </x-nav-link>
                 </div>
-
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('admin.mechanics') }}" :active="request()->routeIs('admin.mechanics')">
-                    {{ __('Mechanics Management') }}
+                    {{ __('Mechanics') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                  <x-nav-link href="{{ route('transactions.index') }}" :active="request()->routeIs('transactions.index')">
+                  {{ __('Transactions') }}
+                  </x-nav-link>
+              </div>
             </div>
             
             <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -179,6 +183,12 @@
                 {{ __('Mechanics Management') }}
             </x-responsive-nav-link>
         </div>
+        
+        <div class="pt-2 pb-3 space-y-1">
+          <x-responsive-nav-link href="{{ route('transactions.index') }}" :active="request()->routeIs('transactions.index')">
+              {{ __('Transactions Management') }}
+          </x-responsive-nav-link>
+      </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
